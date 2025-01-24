@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Gasolina</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Custo da Gasolina</h1>
+        <form method="POST">
+            <label for="distancia">Distância da viagem (em km):</label>
+            <input type="text" id="distancia" name="distancia" placeholder="Ex: 100" required>
+            <button type="submit">Calcular</button>
+        </form>
+        {% if custo %}
+            <p class="resultado">O custo estimado da viagem é: {{ custo }}</p>
+        {% elif erro %}
+            <p class="erro">{{ erro }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
