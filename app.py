@@ -3,7 +3,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 # Função para calcular o custo da gasolina
-def calcular_custo_gasolina(distancia, preco_gasolina=6.50, consumo_medio=13):
+def calcular_custo_gasolina(distancia, preco_gasolina=6.50, consumo_medio=10):
     litros_necessarios = distancia / consumo_medio
     custo_total = litros_necessarios * preco_gasolina
     return custo_total
